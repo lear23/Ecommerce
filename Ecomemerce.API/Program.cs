@@ -1,4 +1,6 @@
+using Ecomemerce.Repositorios.Contrato;
 using Ecomemerce.Repositorios.DBContext;
+using Ecomemerce.Repositorios.Implementacion;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<DbecommerceContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
 });
 
+builder.Services.AddTransient(typeof(IGenericoRepositorio<>), typeof(GenericoRepositorio<>));
+builder.Services.AddScoped<IVentaRepositorio, VentaRepositorio>();
 
 
 var app = builder.Build();
