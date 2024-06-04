@@ -1,6 +1,7 @@
 using Ecomemerce.Repositorios.Contrato;
 using Ecomemerce.Repositorios.DBContext;
 using Ecomemerce.Repositorios.Implementacion;
+using Ecomemerce.Utilidades;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<DbecommerceContext>(options =>
 
 builder.Services.AddTransient(typeof(IGenericoRepositorio<>), typeof(GenericoRepositorio<>));
 builder.Services.AddScoped<IVentaRepositorio, VentaRepositorio>();
+builder.Services.AddAutoMapper(typeof(AutoMaperProfile));
 
 
 var app = builder.Build();

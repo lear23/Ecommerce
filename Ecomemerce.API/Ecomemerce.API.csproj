@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ecomemerce.Repositorios\Ecomemerce.Repositorios.csproj" />
+    <ProjectReference Include="..\Ecomemerce.Utilidades\Ecomemerce.Utilidades.csproj" />
   </ItemGroup>
 
 </Project>
