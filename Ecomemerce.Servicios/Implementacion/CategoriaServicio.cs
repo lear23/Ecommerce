@@ -100,7 +100,7 @@ public class CategoriaServicio(IGenericoRepositorio<Categoria> repositorio, IMap
     {
         try
         {
-            var consulta = _modeloRepo.Consultar(p => string.Concat(p.Nombre.ToLower()).Contains(buscar.ToLower()));
+            var consulta = _modeloRepo.Consultar(p => p.Nombre!.ToLower().Contains(buscar.ToLower()));
 
             List<CategoriDTO> lista = _mapper.Map<List<CategoriDTO>>(await consulta.ToListAsync());
             return lista;
