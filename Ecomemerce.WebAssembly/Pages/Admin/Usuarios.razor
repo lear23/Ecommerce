@@ -1,7 +1,6 @@
 ﻿@page "/usuarios"
 
-@using Ecomemerce.DTO
-@using Ecomemerce.WebAssembly.Servicios.Contrato
+
 @inject IUsuarioServicio usuarioServicio
 @inject IToastService toastService
 @inject SweetAlertService Swal
@@ -82,11 +81,11 @@
         }
 
         StateHasChanged();
-    }
-    protected override async Task OnInitializedAsync()
+    } protected override async Task OnInitializedAsync()
     {
         await ObtenerUsuarios();
     }
+   
     private async Task Eliminar(UsuarioDTO modelo)
     {
         SweetAlertResult result = await Swal.FireAsync(new SweetAlertOptions

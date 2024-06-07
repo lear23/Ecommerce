@@ -1,7 +1,4 @@
 ﻿
-
-
-
 using Ecomemerce.DTO;
 using Ecomemerce.WebAssembly.Servicios.Contrato;
 using System.Net.Http.Json;
@@ -29,16 +26,16 @@ public class CategoriaServicio(HttpClient httpClient) : ICategoriaServicio
 
     public async Task<ResponseDTO<bool>> Eliminar(int id)
     {
-        return await _httpClient.DeleteFromJsonAsync<ResponseDTO<bool>>($"Categoria/Eliminar({id}");
+        return await _httpClient.DeleteFromJsonAsync<ResponseDTO<bool>>($"Categoria/Eliminar/{id}");
     }
 
     public async Task<ResponseDTO<List<CategoriDTO>>> Lista(string buscar)
     {
-        return await _httpClient.GetFromJsonAsync<ResponseDTO<List<CategoriDTO>>>($"Categoria/Lista/({buscar}");
+        return await _httpClient.GetFromJsonAsync<ResponseDTO<List<CategoriDTO>>>($"Categoria/Lista/{buscar}");
     }
 
     public async Task<ResponseDTO<CategoriDTO>> Obtener(int id)
     {
-        return await _httpClient.GetFromJsonAsync<ResponseDTO<CategoriDTO>>($"Categoria/Obtener/({id}");
+        return await _httpClient.GetFromJsonAsync<ResponseDTO<CategoriDTO>>($"Categoria/Obtener/{id}");
     }
 }

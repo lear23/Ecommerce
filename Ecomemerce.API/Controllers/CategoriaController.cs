@@ -18,7 +18,7 @@ namespace Ecomemerce.API.Controllers
         }
 
 
-        [HttpGet("lista/{buscar:alpha?}")]
+        [HttpGet("lista/{buscar?}")]
 
         public async Task<IActionResult> Lista(string buscar = "NA")
         {
