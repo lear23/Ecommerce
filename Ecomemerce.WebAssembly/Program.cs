@@ -1,5 +1,6 @@
 using Blazored.LocalStorage;
 using Blazored.Toast;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Ecomemerce.WebAssembly;
 using Ecomemerce.WebAssembly.Servicios.Contrato;
 using Ecomemerce.WebAssembly.Servicios.implementacion;
@@ -23,5 +24,7 @@ builder.Services.AddScoped<IProductoServicio, ProductoServicio>();
 builder.Services.AddScoped<ICarritoServicio, CarritoServicio>();
 builder.Services.AddScoped<IVentaServicio,VentaServicio>();
 builder.Services.AddScoped<IDashboardServicio, DashboardServicio>();
+
+builder.Services.AddSweetAlert2();
 
 await builder.Build().RunAsync();

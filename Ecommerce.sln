@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.Utilidades", "Ecomemerce.Utilidades\Ecomemerce.Utilidades.csproj", "{05299BE4-DC5A-45FF-AF1F-F0EBB4F85D48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.Utilidades", "Ecomemerce.Utilidades\Ecomemerce.Utilidades.csproj", "{05299BE4-DC5A-45FF-AF1F-F0EBB4F85D48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.Servicios", "Ecomemerce.Servicios\Ecomemerce.Servicios.csproj", "{52B56515-838A-447A-8C56-C78DB02688CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.Servicios", "Ecomemerce.Servicios\Ecomemerce.Servicios.csproj", "{52B56515-838A-447A-8C56-C78DB02688CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.Repositorios", "Ecomemerce.Repositorios\Ecomemerce.Repositorios.csproj", "{CADFDCDB-5802-45FA-ACB4-49B529E615DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.Repositorios", "Ecomemerce.Repositorios\Ecomemerce.Repositorios.csproj", "{CADFDCDB-5802-45FA-ACB4-49B529E615DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.Modelos", "Ecomemerce.Modelos\Ecomemerce.Modelos.csproj", "{CAF757A4-71C4-4E7B-A779-CA487E2AEF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.Modelos", "Ecomemerce.Modelos\Ecomemerce.Modelos.csproj", "{CAF757A4-71C4-4E7B-A779-CA487E2AEF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.DTO", "Ecomemerce.DTO\Ecomemerce.DTO.csproj", "{2F1D44C3-C9D4-4A70-9411-AAC8CB0DE57B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.DTO", "Ecomemerce.DTO\Ecomemerce.DTO.csproj", "{2F1D44C3-C9D4-4A70-9411-AAC8CB0DE57B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.API", "Ecomemerce.API\Ecomemerce.API.csproj", "{7EA6E58B-4461-4BD7-B82C-0E53D2DFC14D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.API", "Ecomemerce.API\Ecomemerce.API.csproj", "{7EA6E58B-4461-4BD7-B82C-0E53D2DFC14D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecomemerce.WebAssembly", "Ecomemerce.WebAssembly\Ecomemerce.WebAssembly.csproj", "{272B592C-25D9-435D-9623-7B070A46931A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomemerce.WebAssembly", "Ecomemerce.WebAssembly\Ecomemerce.WebAssembly.csproj", "{272B592C-25D9-435D-9623-7B070A46931A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
