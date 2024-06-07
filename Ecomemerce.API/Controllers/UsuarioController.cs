@@ -7,7 +7,7 @@ namespace Ecomemerce.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UsusarioController(IUsuarioServicio usuarioServicio) : ControllerBase
+public class UsuarioController(IUsuarioServicio usuarioServicio) : ControllerBase
 {
 
     private readonly IUsuarioServicio _usuarioServicio = usuarioServicio;
