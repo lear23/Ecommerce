@@ -104,48 +104,38 @@ namespace Ecomemerce.API.Controllers
 
 
         [HttpPut("Editar")]
-
         public async Task<IActionResult> Editar([FromBody] ProductoDTO modelo)
         {
             var response = new ResponseDTO<bool>();
-
             try
             {
-
-
                 response.EsCorrecto = true;
                 response.Resultado = await _productoServicio.Editar(modelo);
             }
             catch (Exception ex)
             {
                 response.EsCorrecto = false;
-                response.Mensaje = ex.Message;
+                response.Mensaje = $"Error in Editar: {ex.Message}";
+                Console.Error.WriteLine($"Error in Editar: {ex}");
             }
-
             return Ok(response);
         }
 
-
-
         [HttpDelete("Eliminar/{Id:int}")]
-
         public async Task<IActionResult> Eliminar(int Id)
         {
             var response = new ResponseDTO<bool>();
-
             try
             {
-
-
                 response.EsCorrecto = true;
                 response.Resultado = await _productoServicio.Eliminar(Id);
             }
             catch (Exception ex)
             {
                 response.EsCorrecto = false;
-                response.Mensaje = ex.Message;
+                response.Mensaje = $"Error in Eliminar: {ex.Message}";
+                Console.Error.WriteLine($"Error in Eliminar: {ex}");
             }
-
             return Ok(response);
         }
 
