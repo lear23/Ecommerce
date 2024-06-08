@@ -10,12 +10,12 @@ public class ProductoServicio(HttpClient httpClient) : IProductoServicio
 
     public async Task<ResponseDTO<List<ProductoDTO>>> Catalogo(string categoria, string buscar)
     {
-        return await _httpClient.GetFromJsonAsync<ResponseDTO<List<ProductoDTO>>>($"Producto/Catalogo({categoria}/{buscar}");
+        return await _httpClient.GetFromJsonAsync<ResponseDTO<List<ProductoDTO>>>($"Producto/Catalogo/{categoria}/{buscar}");
     }
 
     public async Task<ResponseDTO<ProductoDTO>> Crear(ProductoDTO modelo)
     {
-        var response = await _httpClient.PostAsJsonAsync("Producto/crear", modelo);
+        var response = await _httpClient.PostAsJsonAsync("Producto/Crear", modelo);
         var result = await response.Content.ReadFromJsonAsync<ResponseDTO<ProductoDTO>>();
         return result!;
     }
@@ -29,16 +29,16 @@ public class ProductoServicio(HttpClient httpClient) : IProductoServicio
 
     public async Task<ResponseDTO<bool>> Eliminar(int id)
     {
-        return await _httpClient.DeleteFromJsonAsync<ResponseDTO<bool>>($"Producto/Eliminar({id}");
+        return await _httpClient.DeleteFromJsonAsync<ResponseDTO<bool>>($"Producto/Eliminar/{id}");
     }
 
     public async Task<ResponseDTO<List<ProductoDTO>>> Lista(string buscar)
     {
-        return await _httpClient.GetFromJsonAsync<ResponseDTO<List<ProductoDTO>>>($"Producto/Lista{buscar}");
+        return await _httpClient.GetFromJsonAsync<ResponseDTO<List<ProductoDTO>>>($"Producto/Lista/{buscar}");
     }
 
     public async Task<ResponseDTO<ProductoDTO>> Obtener(int id)
     {
-        return await _httpClient.GetFromJsonAsync<ResponseDTO<ProductoDTO>>($"Producto/Eliminar({id}");
+        return await _httpClient.GetFromJsonAsync<ResponseDTO<ProductoDTO>>($"Producto/Obtener/{id}");
     }
 }

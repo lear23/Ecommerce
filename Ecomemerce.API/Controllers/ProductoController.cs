@@ -36,7 +36,7 @@ namespace Ecomemerce.API.Controllers
         }
 
 
-        [HttpGet("Catalogo/{Categoria:alpha}/{buscar:alpha?}")]
+        [HttpGet("Catalogo/{Categoria}/{buscar?}")]
 
         public async Task<IActionResult> Catalogo(string Categoria, string buscar = "NA")
         {
@@ -107,10 +107,11 @@ namespace Ecomemerce.API.Controllers
         public async Task<IActionResult> Editar([FromBody] ProductoDTO modelo)
         {
             var response = new ResponseDTO<bool>();
+
             try
             {
-                response.EsCorrecto = true;
                 response.Resultado = await _productoServicio.Editar(modelo);
+                response.EsCorrecto = response.Resultado;
             }
             catch (Exception ex)
             {
@@ -118,6 +119,7 @@ namespace Ecomemerce.API.Controllers
                 response.Mensaje = $"Error in Editar: {ex.Message}";
                 Console.Error.WriteLine($"Error in Editar: {ex}");
             }
+
             return Ok(response);
         }
 
@@ -125,10 +127,11 @@ namespace Ecomemerce.API.Controllers
         public async Task<IActionResult> Eliminar(int Id)
         {
             var response = new ResponseDTO<bool>();
+
             try
             {
-                response.EsCorrecto = true;
                 response.Resultado = await _productoServicio.Eliminar(Id);
+                response.EsCorrecto = response.Resultado;
             }
             catch (Exception ex)
             {
@@ -136,6 +139,7 @@ namespace Ecomemerce.API.Controllers
                 response.Mensaje = $"Error in Eliminar: {ex.Message}";
                 Console.Error.WriteLine($"Error in Eliminar: {ex}");
             }
+
             return Ok(response);
         }
 
